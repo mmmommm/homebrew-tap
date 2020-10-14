@@ -5,7 +5,7 @@ class Tenki < Formula
   homepage "https://github.com/mmmommm/tenki"
   url “https://github.com/mmmommm/tenki/releases/download/v1.0.6/tenki_1.0.6_darwin_amd64.tar.gz”
   sha256 “0c44b5694504e42406d7ad77c05c39a2c7414ba4302c8edd5ec008862e44e47e”
-  license “”
+  depends_on 'go' => :build
 
   # depends_on "cmake" => :build
 
