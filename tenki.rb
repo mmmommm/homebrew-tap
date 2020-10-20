@@ -2,16 +2,16 @@
 class Tenki < Formula
   desc "Returns weather forecast in perticular prefecture."
   homepage "“https://github.com/mmmommm/tenki”"
-  version "1.2.6"
+  version "1.2.9"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/mmmommm/tenki/releases/download/v1.2.6/tenki_1.2.6_Darwin_x86_64.tar.gz"
-    sha256 "8ad86892159cee045a67159dc65c02950315fc9f0230a442b19919092741b6c6"
+    url "https://github.com/mmmommm/tenki/releases/download/v1.2.9/tenki_1.2.9_Darwin_x86_64.tar.gz"
+    sha256 "e32ba5de8aa15d78b0bb960a6f61044a583a9e0e18aece585d7cc9d84159c08a"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/mmmommm/tenki/releases/download/v1.2.6/tenki_1.2.6_Linux_x86_64.tar.gz"
-      sha256 "bb94d06c59eca6e5112541d4a06f3dae8dc36b65f9228434a7b0fc158b9141e6"
+      url "https://github.com/mmmommm/tenki/releases/download/v1.2.9/tenki_1.2.9_Linux_x86_64.tar.gz"
+      sha256 "eccd7d71e5a08417593beaf529cc703ca85a8b96a3238f3a84effde780e1620c"
     end
   end
 
