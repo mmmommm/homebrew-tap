@@ -5,20 +5,20 @@
 class Goinit < Formula
   desc "Initialization setting for Go."
   homepage "https://mmmommm.github.io"
-  version "0.0.6"
+  version "0.0.7"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/mmmommm/goinit/releases/download/v0.0.6/goinit_0.0.6_Darwin_arm64.tar.gz"
-      sha256 "cd9f4b8f84375ad719c7cbe8a9e8b46f35c93bde6054da832df76bb30ee83435"
+    if Hardware::CPU.intel?
+      url "https://github.com/mmmommm/goinit/releases/download/v0.0.7/goinit_0.0.7_Darwin_x86_64.tar.gz"
+      sha256 "cef2a1f410f938cd762ee6032597e172bfe88edbcc6daee7de19f07b6ca3c0bd"
 
       def install
         bin.install "goinit"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/mmmommm/goinit/releases/download/v0.0.6/goinit_0.0.6_Darwin_x86_64.tar.gz"
-      sha256 "971aaaa2f1898a915f5680272f976aa35998ecf1dc0ae51aaec6c09401bea826"
+    if Hardware::CPU.arm?
+      url "https://github.com/mmmommm/goinit/releases/download/v0.0.7/goinit_0.0.7_Darwin_arm64.tar.gz"
+      sha256 "eb7388ea68e4888051eb69d5825a68065553c60c4c1bd11038e830165eaf5042"
 
       def install
         bin.install "goinit"
@@ -27,17 +27,17 @@ class Goinit < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/mmmommm/goinit/releases/download/v0.0.6/goinit_0.0.6_Linux_x86_64.tar.gz"
-      sha256 "a6151f8c4bfc7a270203e9f7caadcbad6480d7574de3959ad6a1c7a8806bda33"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/mmmommm/goinit/releases/download/v0.0.7/goinit_0.0.7_Linux_arm64.tar.gz"
+      sha256 "70cca2a38e66f687e6ee78a3fc324f61be8969d3699be4f28de4c5f1bb4c8343"
 
       def install
         bin.install "goinit"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mmmommm/goinit/releases/download/v0.0.6/goinit_0.0.6_Linux_arm64.tar.gz"
-      sha256 "d2f26e14bcd87baed8c885ee5f0910659701e6f656cc1dc10bd1459be26124fa"
+    if Hardware::CPU.intel?
+      url "https://github.com/mmmommm/goinit/releases/download/v0.0.7/goinit_0.0.7_Linux_x86_64.tar.gz"
+      sha256 "bf48b9014e27031fdcbc6bbf018ba4da45b23032c5f5e2e2167d2834fed623a2"
 
       def install
         bin.install "goinit"
