@@ -5,20 +5,20 @@
 class Goinit < Formula
   desc "Initialization setting for Go."
   homepage "https://mmmommm.github.io"
-  version "0.0.9"
+  version "0.1.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/mmmommm/goinit/releases/download/v0.0.9/goinit_0.0.9_Darwin_arm64.tar.gz"
-      sha256 "a016735348e48f5afbaaf801a69d1eb1e64328b8bef902a4c21d4e201ea44c8f"
+      url "https://github.com/mmmommm/goinit/releases/download/v0.1.0/goinit_0.1.0_Darwin_arm64.tar.gz"
+      sha256 "d6106a786098299ec16b48546ec5060e9aac24502825eff1335def4bccc1dd8a"
 
       def install
         bin.install "goinit"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mmmommm/goinit/releases/download/v0.0.9/goinit_0.0.9_Darwin_x86_64.tar.gz"
-      sha256 "4aebcabba4c844fb9c1cef8281c316be7d646134ed630dc868c0af8a2a48877d"
+      url "https://github.com/mmmommm/goinit/releases/download/v0.1.0/goinit_0.1.0_Darwin_x86_64.tar.gz"
+      sha256 "676badba899cfe4d7f275835742b6ca84d8b1951fb11a8a92c1597d92eb697fc"
 
       def install
         bin.install "goinit"
@@ -27,17 +27,17 @@ class Goinit < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mmmommm/goinit/releases/download/v0.0.9/goinit_0.0.9_Linux_arm64.tar.gz"
-      sha256 "9ff59a3559e381b1b7fed1a26884d202ea1d4792b2cdd9ee5ea8abb0e8b57986"
+    if Hardware::CPU.intel?
+      url "https://github.com/mmmommm/goinit/releases/download/v0.1.0/goinit_0.1.0_Linux_x86_64.tar.gz"
+      sha256 "07b59c5d08909bbfbc1fb670c583ae1bd9ef53340af1ea7fbba47f9970913e91"
 
       def install
         bin.install "goinit"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/mmmommm/goinit/releases/download/v0.0.9/goinit_0.0.9_Linux_x86_64.tar.gz"
-      sha256 "ca47c01a63e3115567f6919ec58bded68e3b8725d3669cd3d300b91804136242"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/mmmommm/goinit/releases/download/v0.1.0/goinit_0.1.0_Linux_arm64.tar.gz"
+      sha256 "4571ad11551b5a1ba5743f93e0abd371cdc0be57eb392e2287e7b43b82a80418"
 
       def install
         bin.install "goinit"
