@@ -5,20 +5,20 @@
 class Goinit < Formula
   desc "Initialization setting for Go."
   homepage "https://mmmommm.github.io"
-  version "0.1.2"
+  version "0.1.4"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mmmommm/goinit/releases/download/v0.1.2/goinit_0.1.2_Darwin_x86_64.tar.gz"
-      sha256 "3a7e0ab2ed1deec548d92e1ccf0135427a2409038fecd21609081a37816d058d"
+      url "https://github.com/mmmommm/goinit/releases/download/v0.1.4/goinit_0.1.4_Darwin_x86_64.tar.gz"
+      sha256 "6e87b34a08cf08f0cc04bc0c344be70f9128b525b474a73ed9733a48f2c02f91"
 
       def install
         bin.install "goinit"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/mmmommm/goinit/releases/download/v0.1.2/goinit_0.1.2_Darwin_arm64.tar.gz"
-      sha256 "149a518777720706253e995d00d89b8ca4ce6f07ffd30417cb054f54e1d722eb"
+      url "https://github.com/mmmommm/goinit/releases/download/v0.1.4/goinit_0.1.4_Darwin_arm64.tar.gz"
+      sha256 "dfdfbb320c232c2ac82e9cc9b7fc42f64193919e2a5bc9c003e2b4a4212813c8"
 
       def install
         bin.install "goinit"
@@ -28,16 +28,16 @@ class Goinit < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mmmommm/goinit/releases/download/v0.1.2/goinit_0.1.2_Linux_arm64.tar.gz"
-      sha256 "12593e86a77788ffa26485bd6f1421bcebde6e55e5b7b647111e9fc26459dc46"
+      url "https://github.com/mmmommm/goinit/releases/download/v0.1.4/goinit_0.1.4_Linux_arm64.tar.gz"
+      sha256 "012cf1535570eb5e25c0f3d4cccae8477ed6db80f7eebe04b62cfa676de5787d"
 
       def install
         bin.install "goinit"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/mmmommm/goinit/releases/download/v0.1.2/goinit_0.1.2_Linux_x86_64.tar.gz"
-      sha256 "35f645e24781c7bdceec7d7ad188e22a8a4f8020f28d97b6fc0e39b670e29629"
+      url "https://github.com/mmmommm/goinit/releases/download/v0.1.4/goinit_0.1.4_Linux_x86_64.tar.gz"
+      sha256 "454fbc999e3ff8dd8555b7efa194119c17dae0cc76cd093643a5d1b0538ebc0f"
 
       def install
         bin.install "goinit"
